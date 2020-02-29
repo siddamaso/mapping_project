@@ -4,7 +4,160 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    android:background="@drawable/bg"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#ffdd00"
+            app:popupTheme="@style/AppTheme.AppBarOverlay"
+            />
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            android:background="@drawable/bg">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/relLayout1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/guppy_pic"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/rovic" />
+
+                        <com.codesgood.views.JustifiedTextView
+                            android:id="@+id/textView10"
+                            android:layout_width="234dp"
+                            android:layout_height="92dp"
+                            android:layout_alignTop="@+id/guppy_pic"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="52dp"
+                            android:layout_toEndOf="@+id/guppy_pic"
+                            android:fontFamily="@font/opensans_light_italic"
+                            android:text="Rovic San Gabriel - Death is by the wind always by your side."
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textColor="#000"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/relLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relLayout1"
+                        android:padding="20dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/bm_pic"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/app" />
+
+                        <com.codesgood.views.JustifiedTextView
+                            android:id="@+id/textView12"
+                            android:layout_width="203dp"
+                            android:layout_height="101dp"
+                            android:layout_alignTop="@+id/bm_pic"
+                            android:layout_toEndOf="@+id/bm_pic"
+                            android:fontFamily="@font/opensans_light_italic"
+                            android:textColor="#000"
+                            android:text="Rafael Villar - If others can do it, let them do it."
+                            android:textAppearance="@style/TextAppearance.AppCompat" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relLayout2"
+                        android:padding="20dp"
+                        android:id="@+id/relLayout3">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/aff_pic"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/app" />
+
+                        <com.codesgood.views.JustifiedTextView
+                            android:id="@+id/textView13"
+                            android:layout_width="198dp"
+                            android:layout_height="86dp"
+                            android:layout_alignTop="@+id/aff_pic"
+                            android:layout_toEndOf="@+id/aff_pic"
+                            android:fontFamily="@font/opensans_light_italic"
+                            android:textColor="#000"
+                            android:text="Juvenile males look like females for a time, but the dorsal spot fades and disappears as the males mature."
+                            android:textAppearance="@style/TextAppearance.AppCompat" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:layout_below="@+id/relLayout3">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ch_pic"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/app" />
+
+                        <com.codesgood.views.JustifiedTextView
+                            android:id="@+id/textView14"
+                            android:layout_width="215dp"
+                            android:layout_height="115dp"
+                            android:layout_alignTop="@+id/ch_pic"
+                            android:layout_toEndOf="@+id/ch_pic"
+                            android:fontFamily="@font/opensans_light"
+                            android:textColor="#000"
+                            android:text='Orange chromides prey on the eggs and larvae of the green chromide and also act as a "cleaner fish" '
+                            android:textAppearance="@style/TextAppearance.AppCompat" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+        </FrameLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+
 
 
 
