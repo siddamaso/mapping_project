@@ -13,28 +13,38 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, OnMapReadyCallback {
 
     private DrawerLayout drawer;
     View HeaderView;
-    TextView nav_map, manual, about_app, about_us;
+    private GoogleMap mMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.navi_drawer);
-
-        about_app = findViewById(R.id.nav_app);
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -56,7 +66,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         int id = menuItem.getItemId();
 
-        if (id == R.id.nav_app) {
+        if (id == R.id.nav_go) {
+
+            viewmap();
+        }
+
+        else if (id == R.id.nav_app) {
 
             viewaboutapp();
         }
@@ -65,9 +80,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             viewaboutus();
 
         }
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void viewmap() {
+        View mView = getLayoutInflater().inflate(R.layout.set_location,null);
+
     }
 
     private void viewaboutus() {
@@ -78,5 +98,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private void viewaboutapp() {
         Intent feedIntent = new Intent(MainActivity.this, AboutApp.class);
         startActivity(feedIntent);
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+
+        // Add a marker in Sydney and move the camera
+        LatLng sydney = new LatLng(-14.6561634,121.0760447);
+        mMap.addMarker(new MarkerOptions().position(sydney).title("This is Antipolo"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
 }
