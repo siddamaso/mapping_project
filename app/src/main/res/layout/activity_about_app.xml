@@ -53,7 +53,7 @@
     <com.codesgood.views.JustifiedTextView
         android:id="@+id/textView4"
         android:layout_width="385dp"
-        android:layout_height="451dp"
+        android:layout_height="371dp"
         android:layout_marginBottom="52dp"
         android:fontFamily="@font/opensans_light_italic"
         android:text="MapIT is a company that provides interactive and digitalized maps for public establishments. It envisions change and innovation to cope up with the current generation’s technology.
@@ -66,5 +66,22 @@ This will be an innovation from both digital maps and traditional, in the sense 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <com.codesgood.views.JustifiedTextView
+        android:id="@+id/textView25"
+        android:layout_width="385dp"
+        android:layout_height="451dp"
+        android:layout_marginTop="-10dp"
+        android:fontFamily="@font/opensans_light_italic"
+        android:text="TIPlaces is a product of a mapping service company called MapIT. With its construction being made specifically for TIP-Quezon City, It's aim is to bring convenience and a sense of modernity to to the people in the campus that use it."
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="#000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

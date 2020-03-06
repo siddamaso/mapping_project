@@ -7,21 +7,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class AboutUs extends AppCompatActivity {
+public class manual extends AppCompatActivity {
 
     ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about_us);
+        setContentView(R.layout.activity_manual);
 
         back = findViewById(R.id.back);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AboutUs.this, MainActivity.class);
+                Intent intent = new Intent(manual.this, MainActivity.class);
                 startActivity(intent);
             }
         });

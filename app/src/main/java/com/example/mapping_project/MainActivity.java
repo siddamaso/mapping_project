@@ -65,6 +65,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             viewaboutus();
 
         }
+        else if (id == R.id.nav_manual) {
+
+            viewmanual ();
+
+        }
+
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -79,4 +86,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Intent feedIntent = new Intent(MainActivity.this, AboutApp.class);
         startActivity(feedIntent);
     }
+
+    private void viewmanual () {
+        Intent feedIntent = new Intent (MainActivity.this, manual.class);
+        startActivity(feedIntent);
+    }
+
 }

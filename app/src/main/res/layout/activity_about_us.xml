@@ -19,8 +19,19 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="#ffdd00"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:popupTheme="@style/AppTheme.AppBarOverlay"
-            />
+            tools:ignore="MissingConstraints">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_back"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="2dp"
+                android:layout_alignParentLeft="true"/>
+        </androidx.appcompat.widget.Toolbar>
 
         <FrameLayout
             android:id="@+id/content_frame"
@@ -53,7 +64,7 @@
                             android:id="@+id/guppy_pic"
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:src="@drawable/rovic" />
+                            android:src="@drawable/ic_man" />
 
                         <com.codesgood.views.JustifiedTextView
                             android:id="@+id/textView10"
@@ -64,12 +75,11 @@
                             android:layout_marginTop="52dp"
                             android:layout_toEndOf="@+id/guppy_pic"
                             android:fontFamily="@font/opensans_light_italic"
-                            android:text="Rovic San Gabriel - Death is by the wind always by your side."
+                            android:text="Onic Damaso - Death is by the wind always by your side."
                             android:textAppearance="@style/TextAppearance.AppCompat"
                             android:textColor="#000"
                             android:textSize="13sp" />
                     </RelativeLayout>
-
 
                     <RelativeLayout
                         android:id="@+id/relLayout2"
@@ -82,7 +92,7 @@
                             android:id="@+id/bm_pic"
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:src="@drawable/app" />
+                            android:src="@drawable/rovic" />
 
                         <com.codesgood.views.JustifiedTextView
                             android:id="@+id/textView12"
@@ -92,7 +102,7 @@
                             android:layout_toEndOf="@+id/bm_pic"
                             android:fontFamily="@font/opensans_light_italic"
                             android:textColor="#000"
-                            android:text="Rafael Villar - If others can do it, let them do it."
+                            android:text="Rovic San Gabriel - Death is like a wind, always by my side."
                             android:textAppearance="@style/TextAppearance.AppCompat" />
                     </RelativeLayout>
 
@@ -107,7 +117,7 @@
                             android:id="@+id/aff_pic"
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:src="@drawable/app" />
+                            android:src="@drawable/villar" />
 
                         <com.codesgood.views.JustifiedTextView
                             android:id="@+id/textView13"
@@ -117,11 +127,12 @@
                             android:layout_toEndOf="@+id/aff_pic"
                             android:fontFamily="@font/opensans_light_italic"
                             android:textColor="#000"
-                            android:text="Juvenile males look like females for a time, but the dorsal spot fades and disappears as the males mature."
+                            android:text="Rafael Villar - If others can do it, let them do it."
                             android:textAppearance="@style/TextAppearance.AppCompat" />
                     </RelativeLayout>
 
                     <RelativeLayout
+                        android:id="@+id/relLayout4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="20dp"
@@ -131,7 +142,7 @@
                             android:id="@+id/ch_pic"
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:src="@drawable/app" />
+                            android:src="@drawable/applicant" />
 
                         <com.codesgood.views.JustifiedTextView
                             android:id="@+id/textView14"
@@ -141,10 +152,210 @@
                             android:layout_toEndOf="@+id/ch_pic"
                             android:fontFamily="@font/opensans_light"
                             android:textColor="#000"
-                            android:text='Orange chromides prey on the eggs and larvae of the green chromide and also act as a "cleaner fish" '
+                            android:text="Mark Sarabia- The unseen blade is the deadliest"
                             android:textAppearance="@style/TextAppearance.AppCompat" />
                     </RelativeLayout>
 
+
+                    <RelativeLayout
+                        android:id="@+id/relLayout5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:layout_below="@+id/relLayout4">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ch_picss"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/zack" />
+
+                        <com.codesgood.views.JustifiedTextView
+                            android:id="@+id/textView17"
+                            android:layout_width="215dp"
+                            android:layout_height="115dp"
+                            android:layout_alignTop="@+id/ch_picss"
+                            android:layout_toEndOf="@+id/ch_picss"
+                            android:fontFamily="@font/opensans_light"
+                            android:textColor="#000"
+                            android:text="Zack Gonzales- Do good everyday"
+                            android:textAppearance="@style/TextAppearance.AppCompat" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relLayout6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:layout_below="@+id/relLayout5">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ch_picx"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/co" />
+
+                        <com.codesgood.views.JustifiedTextView
+                            android:id="@+id/textView18"
+                            android:layout_width="215dp"
+                            android:layout_height="115dp"
+                            android:layout_alignTop="@+id/ch_picx"
+                            android:layout_toEndOf="@+id/ch_picx"
+                            android:fontFamily="@font/opensans_light"
+                            android:textColor="#000"
+                            android:text="Smith Co- The early bird, catches the worms"
+                            android:textAppearance="@style/TextAppearance.AppCompat" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relLayout7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:layout_below="@+id/relLayout6">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ch_picxx"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/cor" />
+
+                        <com.codesgood.views.JustifiedTextView
+                            android:id="@+id/textView19"
+                            android:layout_width="215dp"
+                            android:layout_height="115dp"
+                            android:layout_alignTop="@+id/ch_picxx"
+                            android:layout_toEndOf="@+id/ch_picxx"
+                            android:fontFamily="@font/opensans_light"
+                            android:textColor="#000"
+                            android:text="Jan Daniel Coronado - By my will , this shall be finished"
+                            android:textAppearance="@style/TextAppearance.AppCompat" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relLayout8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:layout_below="@+id/relLayout7">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ch_picsx"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/eva" />
+
+                        <com.codesgood.views.JustifiedTextView
+                            android:id="@+id/textView20"
+                            android:layout_width="215dp"
+                            android:layout_height="115dp"
+                            android:layout_alignTop="@+id/ch_picsx"
+                            android:layout_toEndOf="@+id/ch_picsx"
+                            android:fontFamily="@font/opensans_light"
+                            android:textColor="#000"
+                            android:text="Christian Eva- A focused mind can pierce through stone"
+                            android:textAppearance="@style/TextAppearance.AppCompat" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relLayout9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:layout_below="@+id/relLayout8">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ch_picxs"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/jim" />
+
+                        <com.codesgood.views.JustifiedTextView
+                            android:id="@+id/textView21"
+                            android:layout_width="215dp"
+                            android:layout_height="115dp"
+                            android:layout_alignTop="@+id/ch_picxs"
+                            android:layout_toEndOf="@+id/ch_picxs"
+                            android:fontFamily="@font/opensans_light"
+                            android:textColor="#000"
+                            android:text="Jim Miles Tibe- The early bird, catches the worms"
+                            android:textAppearance="@style/TextAppearance.AppCompat" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relLayout10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:layout_below="@+id/relLayout9">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ch_piccs"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/lewin" />
+
+                        <com.codesgood.views.JustifiedTextView
+                            android:id="@+id/textView22"
+                            android:layout_width="215dp"
+                            android:layout_height="115dp"
+                            android:layout_alignTop="@+id/ch_piccs"
+                            android:layout_toEndOf="@+id/ch_piccs"
+                            android:fontFamily="@font/opensans_light"
+                            android:textColor="#000"
+                            android:text="John Lewin Mesias- The early bird, catches the worms"
+                            android:textAppearance="@style/TextAppearance.AppCompat" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relLayout11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:layout_below="@+id/relLayout10">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ch_picsc"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/jose" />
+
+                        <com.codesgood.views.JustifiedTextView
+                            android:id="@+id/textView23"
+                            android:layout_width="215dp"
+                            android:layout_height="115dp"
+                            android:layout_alignTop="@+id/ch_picsc"
+                            android:layout_toEndOf="@+id/ch_picsc"
+                            android:fontFamily="@font/opensans_light"
+                            android:textColor="#000"
+                            android:text="Jose Capistrano- The early bird, catches the worms"
+                            android:textAppearance="@style/TextAppearance.AppCompat" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relLayout12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:layout_below="@+id/relLayout11">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ch_picscs"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/hanz" />
+
+                        <com.codesgood.views.JustifiedTextView
+                            android:id="@+id/textView24"
+                            android:layout_width="215dp"
+                            android:layout_height="115dp"
+                            android:layout_alignTop="@+id/ch_picscs"
+                            android:layout_toEndOf="@+id/ch_picscs"
+                            android:fontFamily="@font/opensans_light"
+                            android:textColor="#000"
+                            android:text="Hanz Adriane Niemes- The early bird, catches the worms"
+                            android:textAppearance="@style/TextAppearance.AppCompat" />
+                    </RelativeLayout>
 
                 </RelativeLayout>
 
